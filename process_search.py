@@ -44,7 +44,7 @@ class ProcessSearch:
             (AF_INET, SOCK_DGRAM): 'UDP',
             (AF_INET6, SOCK_DGRAM): 'UDP6'
         }
-        self.__HEADER = [[
+        self.__HEADER = [
             'Name',
             'Pid',
             'Protocol',
@@ -55,7 +55,7 @@ class ProcessSearch:
             'Status',
             'Country',
             'City'
-        ]]
+        ]
         if pathtodb is None:
             self.ip_locator = None
         else:
@@ -102,7 +102,7 @@ class ProcessSearch:
         return scan_info
 
     def print_all(self, info: list) -> None:
-        print("{: >20} {: >10} {: >10} {: >40} {: >15} {: >40} {: >15} {: >15} {: >15} {: >15}".format(*self.__HEADER[0]))
+        print("{: >20} {: >10} {: >10} {: >40} {: >15} {: >40} {: >15} {: >15} {: >15} {: >15}".format(*self.__HEADER))
         for row in info:
             print("{: >20} {: >10} {: >10} {: >40} {: >15} {: >40} {: >15} {: >15} {: >15} {: >15}".format(*row))
 
