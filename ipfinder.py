@@ -25,8 +25,7 @@ class IpFinder:
         if self.city_reader is not None:
             try:
                 self.city_reader = geoip2.database.Reader(self.city_reader)
-            except Exception as err:
-                print(err)
+            except:
                 raise
 
     def find_ip_country(self, ipaddr: str) -> str:
