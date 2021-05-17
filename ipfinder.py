@@ -3,20 +3,21 @@ import geoip2.database
 
 class IpFinder:
     """
-    A class to manage and extract information related to IP addresses in GeoLite2-City.mmdb database
+    A class to manage and link IP addresses to a physical location using GeoLite2-City.mmdb database.
+    The GeoLite2-City.mmdb can provide data about countries and cities.
 
     Attributes:
     -----------
-    city_reader: geoip2.database.Reader
-        reader handle of GeoLite2-City.mmdb
+    city_reader(pathtodb: str(/usr/path_to/GeoLite2-City.mmdb) -> geoip2_handle_object
+        reader handle to manipulate data from GeoLite2-City.mmdb
 
     Methods:
     --------
-    find_ip_country(ipaddr: str(IP ADDRESS))
-        return ip address' associated country iso code
+    find_ip_country(ipaddr: str(IP ADDRESS)): str
+        return IP address' associated country iso code.
 
-    find_ip_city(ipaddr: str(IP ADDRESS))
-        return ip address' associated city name
+    find_ip_city(ipaddr: str(IP ADDRESS)): str
+        return IP address' associated city name.
     """
 
     def __init__(self, pathtodb: str = None) -> None:
