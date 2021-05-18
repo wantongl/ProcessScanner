@@ -34,8 +34,10 @@
 
 >  pip install --pre scapy\[complete\]
 
-> Scapy needs additional Platform-specific instructions best to follow:
-> 
+<p>
+  Scapy needs additional Platform-specific instructions best to follow:
+</p>
+
 > https://scapy.readthedocs.io/en/latest/installation.html
 
 # Limitations
@@ -44,5 +46,5 @@
   
   Packet Sniffer functions and is doing what it's suppose to do, but there are still room for optimization.
   
-  TODO: Find a better method to detect what processes are doing and sending over the network. Ideally substitude psutil package with something better.
+  TODO: Find a better method to detect what processes are doing and sending over the network.
 </p>
